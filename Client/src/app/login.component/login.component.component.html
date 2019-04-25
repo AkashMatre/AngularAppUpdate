@@ -1,0 +1,49 @@
+<div class="center" dirtest>
+
+        <img
+  uiImageLoader
+  loader="./assets/img/hglogo.png"
+  [src]="post.imagePath" [alt]="post.title">
+
+
+
+  <form [formGroup] = "form">
+  <div class="text-center">
+      <h2>Login...</h2>
+    </div>
+                              <div class="row">
+                              <div class="col-md-4"></div>
+
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                          <label>UserName</label>
+                                          <input type="text" class="form-control border-input"
+                                           name="UserName" [(ngModel)]="user.UserName" formControlName = "UserName"/>
+                                          <!-- <span><i class="fa fa-check-circle" style="color: red;" *ngIf="form.controls.UserName.valid"></i>
+                                            <i class="fa fa-check-circle" style="color: green;" *ngIf="form.controls.UserName.invalid"></i>
+                                        </span>  -->
+                                      </div>
+                                  </div>
+                                         
+                                            <i class="fa fa-times-circle" style="color: red;" *ngIf="form.controls.UserName.invalid">Please enter Username</i>
+                                          
+                                        
+                              </div>
+                            
+                              <div class="row">
+                              <div class="col-md-4"></div>
+
+                                  <div class="col-md-4">
+                                      <div class="form-group">
+                                          <label>PassWord</label>
+                                          <input type="password" class="form-control border-input" name="PassWord" [(ngModel)]="user.PassWord" formControlName = "PassWord"/>
+                                      </div>
+                                  </div>
+                                  <i class="fa fa-times-circle" style="color: red;" *ngIf="form.controls.PassWord.invalid">Please enter Password</i>
+                              </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-info btn-fill btn-wd" (click)="login()"    value="Login" >Login</button>
+    </div>
+
+  </form>
+</div>
